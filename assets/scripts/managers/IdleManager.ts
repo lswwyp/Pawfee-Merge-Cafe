@@ -109,7 +109,6 @@ export class IdleManager {
     if (doubleByAd) {
       c *= 2;
       d *= 2;
-      SaveManager.instance.data.adWatchCount++;
     }
     EconomyManager.instance.addCoins(c, 'offline');
     if (d > 0) EconomyManager.instance.addDiamonds(d);

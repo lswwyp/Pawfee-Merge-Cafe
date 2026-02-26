@@ -128,16 +128,16 @@ export class GuildManager {
     if (n <= 0) return 0;
     let added = 0;
     for (let i = 0; i < n; i++) {
+      const pos = MergeManager.instance.findEmptyCell();
+      if (!pos) break;
       const petId = PetManager.instance.hatchFreeEgg();
       if (!petId) continue;
       const item = MergeManager.instance.createPetFromId(petId);
       if (!item) continue;
-      const pos = MergeManager.instance.findEmptyCell();
-      if (!pos) break;
       MergeManager.instance.placeItem(item, pos.x, pos.y);
       added++;
     }
-    this.data.pendingGiftEggs = 0;
+    this.data.pendingGiftEggs = (this.data.pendingGiftEggs || 0) - added;
     SaveManager.instance.save();
     return added;
   }

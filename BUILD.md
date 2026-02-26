@@ -84,5 +84,7 @@
 - **脚本不显示在组件列表**：确认 `assets/scripts` 下 .ts 已保存且无语法错误；查看控制台是否有编译报错。
 - **找不到 SaveManager / EconomyManager 等**：确认路径为 `managers/SaveManager` 等，与 `assets/scripts` 下目录一致。
 - **存档不生效**：H5 需同源或本地；小游戏用 wx.setStorageSync / wx.getStorageSync 替换 localStorage（在 SaveManager 中做平台分支）。
+- **资源加载失败**：远程 URL 可能因 CORS 或网络失败；GameRoot 已对 ResourceLoader.loadAll 做 try/catch，失败时游戏仍会继续，宠物用占位色块显示。
+- **收件箱领取**：网格满时只会放入能放的数量，剩余蛋保留在收件箱；提示「网格已满，无法领取」表示当前没有空位，可先合并或整理后再领。
 
 完成以上步骤后即可在编辑器中运行预览并构建 H5/小游戏。

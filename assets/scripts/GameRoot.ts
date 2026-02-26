@@ -34,7 +34,11 @@ export class GameRoot extends Component {
   async onLoad() {
     director.addPersistRootNode(this.node);
     if (this.loadingRoot) this.loadingRoot.active = true;
-    await ResourceLoader.loadAll((p, msg) => {});
+    try {
+      await ResourceLoader.loadAll((p, msg) => {});
+    } catch (e) {
+      console.warn('[GameRoot] ResourceLoader.loadAll failed, continue with placeholders:', e);
+    }
     if (this.loadingRoot) this.loadingRoot.active = false;
     this.initManagers();
     this.setupCanvas();

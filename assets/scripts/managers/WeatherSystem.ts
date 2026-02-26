@@ -8,8 +8,8 @@ import {
   WEATHER_SUNNY_CUSTOMER_BONUS,
   WEATHER_RAIN_INDOOR_BONUS,
   WEATHER_STORM_RARE_DROP_BONUS,
+  STORM_BOSS_GOAL,
 } from '../config/GameConfig';
-import { STORM_BOSS_GOAL } from '../config/GameConfig';
 import type { WeatherState } from '../data/SaveData';
 
 export type WeatherType = 'sunny' | 'rain' | 'storm';

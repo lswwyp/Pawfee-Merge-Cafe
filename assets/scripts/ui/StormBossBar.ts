@@ -50,7 +50,7 @@ export class StormBossBar extends Component {
     if (this.progressLabel) this.progressLabel.string = `暴风Boss ${progress}/${goal} 合并`;
     if (this.progressBarFill) {
       const ui = this.progressBarFill.getComponent(UITransform);
-      if (ui) ui.setContentSize(Math.max(0, (progress / goal) * 200), ui.contentSize.height);
+      if (ui && goal > 0) ui.setContentSize(Math.max(0, (progress / goal) * 200), ui.contentSize.height);
     }
     if (this.claimButton) {
       this.claimButton.node.active = progress >= goal;
