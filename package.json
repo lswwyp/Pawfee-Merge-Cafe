@@ -1,0 +1,14 @@
+{
+  "name": "merge-cafe",
+  "version": "1.0.0",
+  "description": "萌宠咖啡合并馆 - Cute Pet Coffee Merge Cafe",
+  "main": "main.js",
+  "scripts": {
+    "build": "echo Build via Cocos Creator",
+    "test": "echo Run in Cocos Creator"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "~4.6.0"
+  }
+}

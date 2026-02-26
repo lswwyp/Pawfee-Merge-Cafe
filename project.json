@@ -1,0 +1,11 @@
+{
+  "ver": "4.0.23",
+  "engine": "cocos-creator",
+  "packages": "packages/main",
+  "version": "1.0.0",
+  "author": "萌宠咖啡合并馆",
+  "description": "Cute Pet Coffee Merge Cafe - Hyper-casual idle merge game",
+  "main": "main.js",
+  "scripts": {},
+  "isBundle": false
+}

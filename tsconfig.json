@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2015",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "outDir": "temp/declarations",
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": { "db://*": ["./*"] },
+    "types": ["./temp/declarations/cc", "./temp/declarations/cc.env"]
+  },
+  "exclude": ["node_modules", "library", "temp", "build"]
+}
